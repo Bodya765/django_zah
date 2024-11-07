@@ -1,0 +1,13 @@
+{% if news %}
+    <h2>Search Results</h2>
+    {% for el in news %}
+        <div class="alert alert-warning">
+            <h3>{{ el.title }}</h3>
+            <p><span>Дата:</span> {{ el.date|date:"D d M Y" }}</p>
+            <p><span>Опис:</span> {{ el.description }}</p>
+            <p><span>Ціна:</span> {{ el.price }} грн</p>
+            <p><span>Місцезнаходження:</span> {{ el.location }}</p>
+            <p><span>Автор:</span> {{ el.author }}</p>
+        </div>
+    {% endfor %}
+{% endif %}

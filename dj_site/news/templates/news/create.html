@@ -1,0 +1,22 @@
+{% extends 'home/layout.html' %}
+{% load static %}
+
+{% block title %}Форма добавлення оголошень{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Форма добавлення оголошень</h1>
+        <form method="post" action="{% url 'create_announcement' %}">
+            {% csrf_token %}
+            {{ form.title }}
+            {{ form.description }}
+            {{ form.price }}
+            {{ form.location }}
+            {{ form.author }}
+            {{ form.date }}
+            {{ form.category }}
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Добавити оголошення</button>
+        </form>
+    </div>
+{% endblock %}

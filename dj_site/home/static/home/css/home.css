@@ -1,0 +1,275 @@
+/* General Styles */
+body {
+    background: #f5f5dc;
+    color: #000;
+    margin: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+.container {
+    padding-top: 120px;
+    height: calc(1200px - 200px);
+    overflow-y: auto;
+}
+
+/* Main Features Section */
+main .features {
+    margin: 80px auto 5px auto;
+    color: #000;
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 500px;
+}
+
+main .features h1 {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #333;
+    font-family: 'Arial Black', Gadget, sans-serif;
+}
+
+main .features p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+/* Button Styles */
+.delete-button, .cancel-button, .edit-button {
+    padding: 8px 16px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+.cancel-button {
+    background-color: #6c757d;
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #5a6268;
+}
+
+/* Edit Button Styles */
+.edit-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Form Styles */
+form {
+    margin: 20px auto;
+    width: 400px;
+    margin-top: 30px;
+}
+
+input, textarea {
+    background-color: #ffffff; /* Білий фон */
+    border: 2px solid #4d4d4d; /* Сірий бордюр */
+    color: #000; /* Чорний текст */
+}
+
+input::placeholder, textarea::placeholder {
+    color: #ccc;
+}
+
+/* Alert Styles */
+.alert {
+    background-color: #f8f5e1;
+    border: 1px solid #e0d6b0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.alert h3 {
+    color: #3c3c3c;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.alert p {
+    color: #5a4a4a;
+    font-size: 14px;
+}
+
+.alert p span {
+    font-weight: bold;
+    color: #3c3c3c;
+}
+
+/* Button Custom Styles */
+.btn-custom, .btn-warning, .button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn-custom {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.btn-custom:hover {
+    background-color: #138496;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: #fff;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+/* Edit/Delete Button Styles */
+.button-edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button-edit:hover {
+    background-color: #45a049;
+}
+
+.button-delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.button-delete:hover {
+    background-color: #e53935;
+}
+
+/* Navbar Styles */
+header {
+    padding: 17px 0;
+}
+
+.navbar {
+    padding: 0.25rem 1rem; /* Зменшено заповнення навігаційної панелі */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #343a40;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+    margin-right: auto;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin-left: 15px;
+}
+
+.navbar .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px; /* Adjusted font size */
+    padding: 5px 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    background-color: #0000FF;
+    color: #fff;
+}
+
+/* Search Bar Styles */
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+}
+
+.search-form input[type="text"] {
+    padding: 12px;
+    border: 2px solid #007BFF; /* Синій бордюр */
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 100%; /* Заповнює весь простір */
+    height: 40px; /* Встановлено на 40px для кращого вирівнювання */
+    background-color: #ffffff; /* Білий фон */
+    color: #000; /* Чорний текст */
+    font-size: 16px; /* Збільшений шрифт */
+}
+
+/* Зміна обводки при фокусі на полі введення */
+.search-form input[type="text"]:focus {
+    border-color: #0056b3; /* Темніша синя при фокусі */
+    outline: none; /* Приховує стандартну обводку */
+}
+
+/* Стиль для кнопки */
+.search-form button {
+    padding: 12px 20px;
+    background-color: #007BFF; /* Синій фон */
+    color: white; /* Білий текст */
+    border: none; /* Без обводки */
+    border-radius: 5px; /* Круглі краї */
+    cursor: pointer; /* Показує курсор при наведенні */
+    transition: background-color 0.3s; /* Анімація */
+    height: 40px; /* Встановлено на 40px для кращого вирівнювання */
+}
+
+/* Зміна фону кнопки при наведенні */
+.search-form button:hover {
+    background-color: #0056b3; /* Темніша синя при наведенні */
+}

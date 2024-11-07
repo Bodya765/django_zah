@@ -1,0 +1,39 @@
+{% extends 'home/layout.html' %}
+
+{% block title %}
+    Оголошення
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Оголошення</h1>
+
+        <form method="get" action="{% url 'news_list' %}" class="category-dropdown mb-3">
+            <select name="category" class="category-btn">
+                <option value="">Всі категорії</option>
+                {% for category in categories %}
+                    <option value="{{ category.id }}"{% if request.GET.category == category.id|stringformat:"d" %} selected{% endif %}>{{ category.name }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-primary">Фільтрувати</button>
+        </form>
+
+        {% if news %}
+            {% for el in news %}
+                <article class="alert alert-warning mb-3">
+                    <h3>{{ el.title }}</h3>
+                    <p><span>Дата:</span> {{ el.date|date:"D d M Y" }}</p>
+                    <p><span>Опис:</span> {{ el.description }}</p>
+                    <p><span>Ціна:</span> {{ el.price }} грн</p>
+                    <p><span>Місцезнаходження:</span> {{ el.location }}</p>
+                    <p><span>Автор:</span> {{ el.author }}</p>
+                    <p><span>Категорія:</span> {{ el.category.name }}</p>
+                    <a href="{% url 'edit_announcement' el.pk %}" class="edit-button">Редагувати</a>
+                    <a href="{% url 'delete_announcement' el.pk %}" class="delete-button">Видалити</a>
+                </article>
+            {% endfor %}
+        {% else %}
+            <p>Оголошень на сайті немає</p>
+        {% endif %}
+    </div>
+{% endblock %}
